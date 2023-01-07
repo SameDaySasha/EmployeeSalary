@@ -4,6 +4,13 @@ class Employee {
         this.salary = salary
         this.title = title
         this.manager = manager
+        if(manager){
+            manager.addEmployee(this)
+        }
+    } 
+    calculateBonus(multiplier){
+        let bonus = (this.salary) * multiplier
+        return bonus
     }
 }
 
